@@ -1,0 +1,434 @@
+/* NOTE: This assignment only uses CSS and no other frameworks, hence designed everything myself */
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+* {
+  height: auto;
+  transition: all .65s ease;
+  box-sizing: border-box;
+}
+/* NOTE: Navigation container */
+.main-nav {
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  background: #203d4f;
+}
+.container {
+  width: 100%;
+  margin: 0 0;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* NOTE: Main Navigation written using Flexbox */
+.main-nav a {
+  color: #97a1a8;
+  text-decoration: none;
+}
+.main-nav ul, .main-nav li {
+  margin: .3vw 0;
+  list-style: none;
+  padding: 0;
+}
+.main-nav ul {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content:flex-end;
+  margin-right: 1em;
+  width: 100%;
+}
+.main-nav li:first-child{
+  width: 100%;
+  background: url("img/png.png") no-repeat;
+  background-position:left;
+  background-size:16vw;
+  padding: 1.5em;
+  margin-left: 3em;
+  padding-left: 5em;
+  margin-right: auto;
+}
+.main-nav ul a {
+  height: auto;
+  padding: 0 .6em;
+  display: flex;
+  text-transform: uppercase;
+}
+.main-nav ul a:hover, .main-nav ul a:focus {
+  padding: .6em;
+  border-bottom: 2px solid #ccc;
+  background: rgba(32, 58, 73, 0.92);
+  color: #ffffff;
+}
+/* NOTE: mobile-button is made when the width is lesser than 768px */
+.main-nav ul .mobile-button a {
+  position: absolute;
+  left: -99999em;
+}
+/* NOTE: Container CSS Ends */
+/* NOTE: My information which can only be seen when the width is lesser than 768px */
+/* NOTE: This section completely uses "vw" that is Viewport-Width which adjusts according to the page width */
+.myinfotop{
+  padding-top: 24vw;
+  padding-bottom: 12vw;
+  width:100%;
+  height:25vw;
+  background:rgb(84, 177, 155);
+  color: white;
+}
+.myinfotop{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+/* NOTE: Display None initially */
+.myinfotop{
+  display: none;
+}
+.propictop{
+  width:20vw;
+  height:20vw;
+}
+.propictop img{
+  border-radius: 50%;
+  width: 100%;
+}
+.profileinfotop p{
+  font-size: 3vw;
+}
+/* NOTE: My Information Section Ends */
+/* NOTE: description block starts */
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#vidtop-content {
+	top: 0;
+	color: #fff;
+}
+.vid-info { position: absolute; top: 0; right: 0; width: 33%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+.vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
+.vid-info a { display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
+}
+@media all and (max-width: 600px) {
+.vid-info { width: 50%; padding: .5rem; }
+.vid-info h1 { margin-bottom: .2rem; }
+}
+@media all and (max-width: 500px) {
+.vid-info .acronym { display: none; }
+}
+/* NOTE: Description Ends */
+/* NOTE: bothcolumn is having two columns, on a single page width till 768px */
+.bothcolumn{
+  margin-top: 5rem;
+  width: 100%;
+  height:auto;
+  background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2));
+}
+.bothcolumn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/* NOTE: leftcolumn contains mostly text and is designed using flexbox */
+.leftcolumn{
+  text-align: center;
+  width: 75%;
+  color: white;
+}
+.leftcolumn{
+  display: flex;
+  align-items:center;
+  flex-direction:column;
+  justify-content:space-between;
+  flex-wrap: wrap;
+}
+.content img{
+  width:15vw;
+  height:15vw;
+}
+.content h1{
+  font-size: 5vw;
+  margin: 2%;
+}
+.leftnav {
+  list-style-type: none;
+	max-width: 100%;
+}
+.leftnav li {
+  font-size: 3vw;
+  margin: 2%;
+	color: #FFF;
+  text-align: center;
+  line-height: 1em;
+}
+.leftnav{
+display: -webkit-flex;
+}
+.leftnav {
+	-webkit-flex-direction: column;
+	-webkit-justify-content: space-between;
+	-webkit-flex-wrap: wrap;
+}
+
+@-webkit-keyframes ani-mouse {
+	0% {
+	opacity: 1;
+	top: 29%;
+	}
+	15% {
+	opacity: 1;
+	top: 50%;
+	}
+	50% {
+	opacity: 0;
+	top: 50%;
+	}
+	100% {
+	opacity: 0;
+	top: 29%;
+	}
+}
+.scroll-btn .mouse {
+	position: relative;
+  left: 45%;
+	display: block;
+	width: 35px;
+	height: 55px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 3px solid white;
+	border-radius: 23px;
+}
+.scroll-btn .mouse > * {
+        position: absolute;
+        display: block;
+        top: 29%;
+        left: 50%;
+        width: 8px;
+        height: 8px;
+        margin: -4px 0 0 -4px;
+        background: white;
+        border-radius: 50%;
+        -webkit-animation: ani-mouse 2.5s linear infinite;
+        -moz-animation: ani-mouse 2.5s linear infinite;
+        animation: ani-mouse 2.5s linear infinite;
+    }
+
+.pscroll{
+        position:relative;
+        top: -2rem;
+        margin-left:2rem;
+        font-size: 16px;
+    }
+
+fieldset{
+  width: 85%;
+  margin: auto;
+text-align: center;
+border: .3em rgba(124, 126, 118, 1);
+border-style: solid none none none;
+}
+legend{
+  font-size: 25px;
+  color: rgba(124, 126, 118, 1);
+  padding: 1em;
+}
+
+/* NOTE: bothcolumn section ends */
+/* NOTE: morearticles section starts */
+.relatedheading{
+  width:100%;
+  margin: 0;
+  background: white;
+}
+.morecolumn
+  {
+  background-color: white;
+   width:100%;
+   margin: 0 auto;
+   display: flex;
+   align-items:baseline;
+   justify-content:center;
+   flex-direction: row;
+   flex-wrap: wrap;
+ }
+.imageandtext{
+  margin: 1.2rem;
+  width: 300px;
+  height: auto;
+  border: 1px solid rgb(193, 227, 220);
+  border-radius: .2rem;
+}
+.imageandtext img{
+  padding: 0;
+  margin: 2% 25%;
+  width:50%;
+}
+.imageandtext h2{
+  color: rgb(52, 210, 202);
+}
+.imageandtext h2,.imageandtext p{
+  font-weight: normal;
+padding: .5rem;
+}
+/* NOTE:  morearticles section ends */
+/* NOTE: Footer section designed only using flexbox */
+.footer{
+  background: rgb(49, 84, 89);
+  color: rgba(112, 112, 112, 0.81);
+  padding: 1em 0;
+  height: auto;
+  width:100%;
+}
+.footer{
+  display: flex;
+  align-items:flex-start;
+  flex-direction:row;
+  justify-content:center;
+  flex-wrap: wrap;
+}
+.listfooter{
+  padding-left:20px;
+  padding-right:20px;
+  margin: .5em 1em;
+  font-weight: lighter;
+  list-style: none;
+    display: flex;
+    align-items:center;
+    flex-direction:column;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+.listfooter li{
+margin-bottom: .4em;
+}
+.listfooter li:first-child{
+  margin-bottom: 1em;
+  font-size: 1.2em;
+  color: white;
+font-weight: normal;
+}
+/* NOTE: Footer Section Ends */
+/* NOTE: Desktop section ends */
+
+/* ------------------------------------------------------------------------------------ */
+/* --------------------------------Media Queries--------------------------------------- */
+/* ------------------------------------------------------------------------------------ */
+@media only screen and (max-width: 1214px){
+  .morecolumn
+    {
+     align-items:center;
+     justify-content: center;
+   }
+   .imageandtext{
+     max-width: 460px;
+   }
+   .profileinfo p{
+       font-size: 1.5vw;
+   }
+}
+@media only screen and (max-width: 810px){
+  .morecolumn
+    {
+     align-items:center;
+     justify-content: center;
+   }
+   .imageandtext{
+     width: 100%;
+   }
+}
+/* NOTE: Media queries for Tablet to make it responsive */
+@media only screen and (max-width: 768px) {
+
+  /* NOTE: My Information on the top is displayed */
+  .myinfotop{
+    display: flex;
+  }
+  /* NOTE: leftcolumn width is increased as right column is removed */
+  .bothcolumn{
+    top: 0;
+  }
+  .leftcolumn{
+    margin-top: 0;
+    transition: none;
+    width: 100%;
+  }
+  /* NOTE: Now using Viewport Width as sizes for different text */
+  .content h1{
+    font-size: 8vw;
+  }
+  .content img{
+    width:20vw;
+    height:20vw;
+  }
+  .leftnav li {
+    font-size: 4vw;
+    margin: 3%;
+  }
+  legend{
+    font-size: 3vw;
+    padding: 2vw;
+  }
+
+/* NOTE: Toggle menu bar is designed here */
+
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .main-nav ul a {
+    position: absolute;
+    left: -99999em;
+  }
+  .main-nav li:first-child{
+    width: 50%;
+    background-position:center;
+    background-size: 30vw;
+    margin-left: .5em;
+  }
+  .main-nav ul.open li {
+    width: 100%;
+  }
+  .main-nav ul.open li.mobile-button a {
+    background: rgba(32, 58, 73, 0.92);
+    color: #ffffff;
+  }
+  .main-nav ul.open a {
+    position: static;
+  }
+  .main-nav ul .mobile-button a {
+    position: static;
+  }
+  .main-nav a {
+    width: 100%;
+  }
+}
