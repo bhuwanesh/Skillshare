@@ -770,14 +770,14 @@ font-weight: normal;
 
 
 .lastnavli{
-  display: -webkit-flex;
+  display: flex;
 }
 
 .lastnavli {
   align-items:stretch;
-	-webkit-flex-direction: row;
-	-webkit-justify-content: space-around;
-	-webkit-flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 .lastnavli {
