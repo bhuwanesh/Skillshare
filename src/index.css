@@ -76,36 +76,6 @@ body {
 /* NOTE: Container CSS Ends */
 /* NOTE: My information which can only be seen when the width is lesser than 768px */
 /* NOTE: This section completely uses "vw" that is Viewport-Width which adjusts according to the page width */
-.myinfotop{
-  padding-top: 24vw;
-  padding-bottom: 12vw;
-  width:100%;
-  height:25vw;
-  background:rgb(84, 177, 155);
-  color: white;
-}
-.myinfotop{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-/* NOTE: Display None initially */
-.myinfotop{
-  display: none;
-}
-.propictop{
-  width:20vw;
-  height:20vw;
-}
-.propictop img{
-  border-radius: 50%;
-  width: 100%;
-}
-.profileinfotop p{
-  font-size: 3vw;
-}
 /* NOTE: My Information Section Ends */
 
 /* NOTE: bothcolumn is having two columns, on a single page width till 768px */
@@ -113,7 +83,7 @@ body {
   margin-top: 3.5em;
   width: 100%;
   height:auto;
-  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),url("img/data.gif") no-repeat;
+  background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),url("img/data.gif") no-repeat;
   background-size: cover;
 }
 .bothcolumn{
@@ -141,15 +111,16 @@ body {
 }
 .content h1{
   font-size: 5vw;
-  margin: 2% 0;
+  margin: 0 0 4% 0;
 }
 .leftnav {
   list-style-type: none;
 	max-width: 100%;
 }
 .leftnav li {
-  font-size: 4vw;
-  margin: 2% 0;
+  font-size: 3vw;
+  font-weight: lighter;
+  margin: 3% 0;
 	color: #FFF;
   text-align: center;
   line-height: 1em;
@@ -161,6 +132,132 @@ display: -webkit-flex;
 	-webkit-flex-direction: column;
 	-webkit-justify-content: space-between;
 	-webkit-flex-wrap: wrap;
+}
+.btn-cont {
+  text-align: center;
+}
+.btn-cont .btn {
+  position: relative;
+  padding: 5px 8px;
+  border: 1.5px solid white;
+  color: white;
+  text-decoration: none;
+}
+.btn-cont .btn:hover {
+  border: none;
+}
+.btn-cont .btn:hover .line-1 {
+  animation: move1 1500ms infinite ease;
+}
+.btn-cont .btn:hover .line-2 {
+  animation: move2 1500ms infinite ease;
+}
+.btn-cont .btn:hover .line-3 {
+  animation: move3 1500ms infinite ease;
+}
+.btn-cont .btn:hover .line-4 {
+  animation: move4 1500ms infinite ease;
+}
+.btn-cont .line-1 {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  background-color: white;
+  left: 0;
+  bottom: 0;
+}
+.btn-cont .line-2 {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  background-color: white;
+  left: 0;
+  top: 0;
+}
+.btn-cont .line-3 {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  background-color: white;
+  right: 0;
+  top: 0;
+}
+.btn-cont .line-4 {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  background-color: white;
+  right: 0;
+  bottom: 0;
+}
+
+@keyframes move1 {
+  0% {
+    height: 100%;
+    bottom: 0;
+  }
+  54% {
+    height: 0;
+    bottom: 100%;
+  }
+  55% {
+    height: 0;
+    bottom: 0;
+  }
+  100% {
+    height: 100%;
+    bottom: 0;
+  }
+}
+@keyframes move2 {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes move3 {
+  0% {
+    height: 100%;
+    top: 0;
+  }
+  54% {
+    height: 0;
+    top: 100%;
+  }
+  55% {
+    height: 0;
+    top: 0;
+  }
+  100% {
+    height: 100%;
+    top: 0;
+  }
+}
+@keyframes move4 {
+  0% {
+    width: 0;
+    right: 0;
+  }
+  55% {
+    width: 100%;
+    right: 0;
+  }
+  100% {
+    width: 0;
+    right: 100%;
+  }
 }
 
 @-webkit-keyframes ani-mouse {
@@ -210,7 +307,7 @@ display: -webkit-flex;
 
 .pscroll{
         position:relative;
-        top: -2.3rem;
+        top: -1.9rem;
         margin-left:2rem;
         font-size: 16px;
     }
@@ -228,6 +325,18 @@ legend{
   padding: 1em;
 }
 
+.mainheading{
+  width: 88%;
+  margin: 3% auto 0;
+}
+.mainheading .heading{
+  font-size: 3vw;
+  font-weight: normal;
+}
+.mainheading .para{
+  font-size: 1.1em;
+  font-weight: lighter;
+}
 /* NOTE: bothcolumn section ends */
 /* NOTE: morearticles section starts */
 .relatedheading{
@@ -262,8 +371,13 @@ legend{
 .imageandtext h2{
   color: rgb(52, 210, 202);
 }
-.imageandtext h2,.imageandtext p{
+.imageandtext h2{
   font-weight: normal;
+padding: .5rem;
+}
+
+.imageandtext p{
+  font-weight: lighter;
 padding: .5rem;
 }
 /* NOTE:  morearticles section ends */
@@ -288,7 +402,6 @@ padding: .5rem;
   margin: 0;
   padding: 0;
   width: 15%;
-
 }
 .worklist li:first-child{
   width: 50%;
@@ -329,19 +442,19 @@ font-size: 0.8em;
 }
 .propictop{
    text-align: center;
-  width: 30%;
+  width: 20%;
   height: auto;
-  margin-right:5%; 
+  margin-right:5%;
 }
 .propictop img{
   width:12vw;
 }
 .profileinfotop{
-  width: 50%;
+  width: 60%;
   margin-left:5%;
 }
 .profileinfotop p{
-  font-size: 1.2vw;
+  font-size: 1.5vw;
 }
 
 .faq-header{
@@ -358,11 +471,11 @@ font-size: 0.8em;
 
 .faq-t {
   line-height: 1em;
-  color: #aaa; 
-  font-family: sans-serif; 
-  float:left; 
-  font-weight: 400; 
-  padding-right: 0.3em; 
+  color: #aaa;
+  font-family: sans-serif;
+  float:left;
+  font-weight: 400;
+  padding-right: 0.3em;
 }
 
 .faq-o {
@@ -404,9 +517,6 @@ font-size: 0.8em;
     position: relative;
 }
 
-/**
- * Lineas / Detalles
- -----------------------*/
 .comments-list:before {
     content: '';
     width: 2px;
@@ -462,9 +572,6 @@ font-size: 0.8em;
     clear: both;
     margin-top: 15px;
 }
-/**
- * Avatar
- ---------------------------*/
 .comments-list .comment-avatar {
     width: 65px;
     height: 65px;
@@ -498,9 +605,6 @@ font-size: 0.8em;
     display: block;
     clear: both;
 }
-/**
- * Caja del Comentario
- ---------------------------*/
 .comments-list .comment-box {
     width: 680px;
     float: right;
@@ -588,7 +692,9 @@ font-size: 0.8em;
     border-radius: 0 0 4px 4px;
 }
 
-.comment-box .comment-name.by-author, .comment-box .comment-name.by-author a {color: #03658c;}
+.comment-box .comment-name.by-author, .comment-box .comment-name.by-author a{
+  color: #03658c;
+}
 .comment-box .comment-name.by-author:after {
     content: 'Author';
     background: #03658c;
@@ -607,15 +713,16 @@ font-size: 0.8em;
  ========================*/
 @media only screen and (max-width: 768px) {
     .comments-container {
-        width: 480px;
+      margin: 2% 3% 0 0;
+        width: 95%;
     }
 
     .comments-list .comment-box {
-        width: 390px;
+        width: 70%;
     }
 
     .reply-list .comment-box {
-        width: 320px;
+        width: 50%;
     }
 }
 
@@ -674,7 +781,7 @@ font-weight: normal;
 }
 
 .lastnavli {
-  
+
   padding: 0;
   list-style-type: none;
 }
@@ -741,10 +848,82 @@ font-weight: normal;
     margin: 3%;
   }
   legend{
-    font-size: 3vw;
+    font-size: 5vw;
     padding: 2vw;
   }
-
+  .mainheading .heading{
+    font-size: 5vw;
+    font-weight: normal;
+  }
+  .mainheading .para{
+    font-size: .95em;
+    font-weight: lighter;
+  }
+  .workflow{
+    background: white;
+    color: rgba(52, 52, 52, 0.81);
+    padding: 1em 0 1em 0;
+    height: auto;
+    width:85%;
+    margin: auto;
+  }
+  .workflow{
+    display: flex;
+    align-items:flex-start;
+    flex-direction:column;
+    justify-content:space-around;
+    flex-wrap: wrap;
+  }
+  .workflow ul{
+    list-style-type: none;
+    margin: 1em 0 1em 0;
+    border: 1px solid rgb(52, 210, 202);
+    border-radius: .5em;
+    padding: 0;
+    width: 100%
+  }
+  .worklist li:first-child{
+    width: 40%;
+    height: 40%;
+    margin: 5% auto;
+  }
+  .worklist li:nth-child(2){
+    font-size: 3em;
+    margin-bottom: 0;
+  }
+  .worklist li:nth-child(3){
+    max-width: 90%;
+    margin: 1em auto;
+    font-size: 2em;
+  }
+  .myinfotop{
+    width:100%;
+    background:white;
+    color: black;
+  }
+  .myinfotop{
+    padding: 0 0 2rem 0 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .propictop{
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  .propictop img{
+    width:20vw;
+  }
+  .profileinfotop{
+    width: 80%;
+  }
+  .profileinfotop p{
+    font-size: 3vw;
+  }
 /* NOTE: Toggle menu bar is designed here */
 
   .main-nav ul {
@@ -778,4 +957,3 @@ font-weight: normal;
     width: 100%;
   }
 }
-
