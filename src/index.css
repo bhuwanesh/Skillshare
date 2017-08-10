@@ -283,14 +283,14 @@ legend{
  }
 .imageandtext{
   margin: 1.2rem;
-  width: 300px;
+  width: 340px;
   height: auto;
   border: 1px solid rgb(193, 227, 220);
   border-radius: .2rem;
 }
 .imageandtext img{
   padding: 0;
-  margin: 2% 25%;
+  margin: 5% 25% 2% 25%;
   width:50%;
 }
 .imageandtext h2{
@@ -301,6 +301,45 @@ legend{
 padding: .5rem;
 }
 /* NOTE:  morearticles section ends */
+
+.workflow{
+  background: rgb(217, 217, 217);
+  color: rgba(52, 52, 52, 0.81);
+  padding: 1em 0;
+  height: auto;
+  width:100%;
+}
+.workflow{
+  display: flex;
+  align-items:flex-start;
+  flex-direction:row;
+  justify-content:space-around;
+  flex-wrap: wrap;
+}
+.workflow ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+
+}
+.worklist li:nth-child(2){
+  margin-bottom: 1em;
+font-size: 1.2em;
+  color: black;
+  font-weight: normal;
+}
+.worklist li:nth-child(3){
+  text-align: center;
+  max-width: 100%;
+  margin-bottom: 1em;
+  border-top: 1px solid black;
+padding-top: 10px;
+font-size: 0.8em;
+  color: black;
+  font-weight: lighter;
+}
+
 /* NOTE: Footer section designed only using flexbox */
 .footer{
   background: rgb(49, 84, 89);
