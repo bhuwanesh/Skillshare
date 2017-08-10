@@ -5,12 +5,18 @@ Instructions:
 2.	Structure of the Assignment is as follows:
 Note: Assignment is completely designed in HTML5 & CSS3.
 Skillshare:
-•	src
-    o	index.css
-    o	menu.js
-    o	img --- contains all images and logo files
-•	index.html
+a.	src
+
+    index.css
+    
+    menu.js
+    
+    img --- contains all images and logo files
+    
+b.	index.html
+
 Note:	 No Build files needed.
+
 3.	Assignment is Responsive from width: 375px to 1445px using mediaqueries.
 
 
