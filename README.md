@@ -1,6 +1,7 @@
 # Skillshare
 
-Instructions:
+#Instructions
+
 1.	Extract the zip folder, just run index.html.
 2.	Structure of the Assignment is as follows:
 Note: Assignment is completely designed in HTML5 & CSS3.
@@ -20,7 +21,7 @@ Note:	 No Build files needed.
 3.	Assignment is Responsive from width: 375px to 1445px using mediaqueries.
 
 
-Approach: 
+#Approach
 
 Everything is HTML, CSS & Mobile Responsive using Media Queries
 
